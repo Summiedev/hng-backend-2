@@ -37,12 +37,12 @@ Visit [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your browser or use Po
 
 ### Base URL:
 ```
-https://hng-backend-task-pm5d.onrender.com
+https://hng-backend-2-w4oe.onrender.com
 ```
 
 ### Endpoint:
 ```
-GET https://hng-backend-task-pm5d.onrender.com/
+GET https://hng-backend-2-w4oe.onrender.com/api/classify-number?number=371
 ```
 
 ### Response Format (200 OK):
