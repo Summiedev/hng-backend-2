@@ -1,17 +1,16 @@
 # HNG12 Backend Task API
 
-This is a simple Flask API for the HNG12 backend track. It returns a JSON response containing the registered email, the current datetime in ISO 8601 format, and the GitHub repository URL.
-
+This Flask-based API classifies a given number and provides interesting mathematical properties about it, along with a fun fact from the Numbers API.
 ## 🚀 Setup Instructions
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/Summiedev/HNG_BACKEND_TASK.git
+git clone https://github.com/Summiedev/hng-backend-2.git
 ```
 
 ### 2️⃣ Navigate into the project directory
 ```bash
-cd your-repo
+cd hng-backend-2
 ```
 
 ### 3️⃣ Create a virtual environment (Optional but recommended)
@@ -49,9 +48,15 @@ GET https://hng-backend-task-pm5d.onrender.com/
 ### Response Format (200 OK):
 ```json
 {
-  "email": "apatirasummie@gmail.com",
-  "current_datetime": "2025-01-30T09:30:00Z",
-  "github_url": "https://github.com/Summiedev/HNG_BACKEND_TASK"
+	"digit_sum": 11,
+	"fun_fact": "371 is a narcissistic number.",
+	"is_perfect": false,
+	"is_prime": false,
+	"number": 371,
+	"properties": [
+		"armstrong",
+		"odd"
+	]
 }
 ```
 
