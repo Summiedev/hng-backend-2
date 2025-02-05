@@ -64,20 +64,20 @@ GET https://hng-backend-task-pm5d.onrender.com/
 
 ### Using Insomnia or Postman
 ```
-GET https://hng-backend-task-pm5d.onrender.com
+GET https://hng-backend-2-w4oe.onrender.com/api/classify-number?number=<num>
 ```
 
 ### Using Python Requests:
 ```python
 import requests
 
-response = requests.get("https://hng-backend-task-pm5d.onrender.com")
+response = requests.get("https://hng-backend-2-w4oe.onrender.com/api/classify-number?number=<num>")
 print(response.json())
 ```
 
 ## 📌 Deployment
 
-- Hosting platform: Render, Vercel, Railway, Heroku, or any cloud service.
+- Hosting platform: Render
 - Public API URL: Your Public API URL
 
 ## 🌍 CORS Handling
