@@ -38,7 +38,7 @@ def get_fun_fact(n):
 @app.route("/api/classify-number", methods=["GET"])
 def classify_number():
     num = request.args.get("number")
-    if not num or not num.lstrip('-').isdigit():
+    if not num or (num[0] == '-' and not num[1:].isdigit()) or (num[0] != '-' and not num.isdigit()):
         return jsonify({"number": num,"error": True}), 400
     
     num = int(num)
