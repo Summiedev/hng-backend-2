@@ -1,16 +1,15 @@
 from flask import Flask, request, jsonify
-from datetime import datetime, timezone
 from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
 CORS(app)
 
-
 def is_armstrong(n):
+    n = abs(n)  # Convert to positive for digit processing
     digits = [int(d) for d in str(n)]
     power = len(digits)
-    return sum(d ** power for d in digits) == n
+    return sum(d ** power for d in digits) == abs(n)
 
 def is_prime(n):
     if n < 2:
@@ -24,7 +23,7 @@ def is_perfect(n):
     return sum(i for i in range(1, n) if n % i == 0) == n
 
 def get_digit_sum(n):
-    return sum(int(d) for d in str(n))
+    return sum(int(d) for d in str(abs(n)))  # Use absolute value
 
 def get_fun_fact(n):
     url = f"http://numbersapi.com/{n}/math?json"
@@ -38,13 +37,14 @@ def get_fun_fact(n):
 @app.route("/api/classify-number", methods=["GET"])
 def classify_number():
     num = request.args.get("number")
+    
     if not num or (num[0] == '-' and not num[1:].isdigit()) or (num[0] != '-' and not num.isdigit()):
-        return jsonify({"number": num,"error": True}), 400
+        return jsonify({"number": num, "error": True}), 400
     
     num = int(num)
     properties = ["armstrong"] if is_armstrong(num) else []
     properties.append("odd" if num % 2 else "even")
-    
+
     response_data = {
         "number": num,
         "is_prime": is_prime(num),
