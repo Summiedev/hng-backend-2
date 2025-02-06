@@ -37,12 +37,12 @@ Visit [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your browser or use Po
 
 ### Base URL:
 ```
-https://hng-backend-2-w4oe.onrender.com
+https://hng-backend-2-1.onrender.com
 ```
 
 ### Endpoint:
 ```
-GET https://hng-backend-2-w4oe.onrender.com/api/classify-number?number=371
+GET https://hng-backend-2-1.onrender.com/api/classify-number?number=371
 ```
 
 ### Response Format (200 OK):
@@ -64,14 +64,14 @@ GET https://hng-backend-2-w4oe.onrender.com/api/classify-number?number=371
 
 ### Using Insomnia or Postman
 ```
-GET https://hng-backend-2-w4oe.onrender.com/api/classify-number?number=<num>
+GET https://hng-backend-2-1.onrender.com/api/classify-number?number=<num>
 ```
 
 ### Using Python Requests:
 ```python
 import requests
 
-response = requests.get("https://hng-backend-2-w4oe.onrender.com/api/classify-number?number=<num>")
+response = requests.get("https://hng-backend-2-1.onrender.com/api/classify-number?number=<num>")
 print(response.json())
 ```
 
